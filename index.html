@@ -15,86 +15,31 @@
 
     <title>Hello, world!</title>
   </head>
-  <body onload="onLoad()">
+  <body onLoad="onLoad()">
     <div class="container">
-      <div
-        class="
-          d-flex
-          flex-wrap
-          align-items-center
-          justify-content-center justify-content-lg-start
-        "
-      >
-        <a
-          href="/"
-          class="
-            d-flex
-            align-items-center
-            mb-2 mb-lg-0
-            text-dark text-decoration-none
-          "
-        >
-          <svg
-            class="bi me-2"
-            width="40"
-            height="32"
-            role="img"
-            aria-label="Bootstrap"
-          >
+      <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
+        <a href="/" class=" d-flex align-items-center mb-2 mb-lg-0 text-dark text-decoration-none">
+          <svg class="bi me-2" width="40" height="32" role="img" aria-label="Bootstrap">
             <use xlink:href="#bootstrap"></use>
           </svg>
         </a>
 
         <ul
-          class="
-            nav
-            col-12 col-lg-auto
-            me-lg-auto
-            mb-2
-            justify-content-center
-            mb-md-0
-          "
-        >
-          <li><a href="#" class="nav-link px-2 link-secondary">Overview</a></li>
-          <li><a href="#" class="nav-link px-2 link-dark">Inventory</a></li>
-          <li><a href="#" class="nav-link px-2 link-dark">Customers</a></li>
+          class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
+          <li><a href="#" class="nav-link px-2 link-secondary" id="allStudentMenu">รายชื่อทั้้งหมด</a></li>
+          <li><a href="#" class="nav-link px-2 link-dark" id="searchMenu">ค้นหา</a></li>
+          <li><a href="#" class="nav-link px-2 link-dark" id="addStudentMenu">เพิ่มนักศึกษา</a></li>
           <li><a href="#" class="nav-link px-2 link-dark">Products</a></li>
         </ul>
 
         <form class="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3">
-          <input
-            type="search"
-            class="form-control"
-            placeholder="Search..."
-            aria-label="Search"
-            id="inputText"
-          />
+          <input type="search" class="form-control" placeholder="Search..." aria-label="Search" id="inputText"/>
         </form>
-        <button
-          type="button"
-          class="btn btn-light text-dark me-2"
-          id="searchButton"
-        >
-          Login
-        </button>
-        <button type="button" class="btn btn-primary">
-          กดมาแล้ว <span class="badge bg-danger" id="count">4</span>
-        </button>
+        <button type="button" class="btn btn-light text-dark me-2" id="searchButton" >Search</button>
+        <button type="button" class="btn btn-primary">กดมาแล้ว<span class="badge bg-danger" id="count">4</span></button>
         <div class="dropdown text-end">
-          <a
-            href="#"
-            class="d-block link-dark text-decoration-none dropdown-toggle"
-            id="dropdownUser1"
-            data-bs-toggle="dropdown"
-            aria-expanded="false"
-          >
-            <img
-              src="https://github.com/mdo.png"
-              alt="mdo"
-              width="32"
-              height="32"
-              class="rounded-circle"
-            />
+          <a href="#" class="d-block link-dark text-decoration-none dropdown-toggle" id="dropdownUser1" data-bs-toggle=" dropdown"aria-expanded="false">
+            <img src="https://github.com/mdo.png" alt="mdo" width="32" height="32" class="rounded-circle"/>
           </a>
           <ul class="dropdown-menu text-small" aria-labelledby="dropdownUser1">
             <li><a class="dropdown-item" href="#">New project...</a></li>
@@ -106,72 +51,74 @@
         </div>
       </div>
     </div>
+    <div id="addUserDetail">
     <div class="d-flex justify-content-center my-3">
-      <form class="row gy-2 gx-3 align-items-center">
-        <div class="col-auto">
-          <label class="visually-hidden" for="name">Name</label>
-          <input
-            type="text"
-            class="form-control"
-            id="name"
-            placeholder="Jane Doe"
-          />
-        </div>
-        <div class="col-auto">
-          <label class="visually-hidden" for="username">Username</label>
-          <div class="input-group">
-            <div class="input-group-text">@</div>
-            <input
-              type="text"
-              class="form-control"
-              id="username"
-              placeholder="Username"
-            />
-          </div>
-        </div>
-        <div class="col-auto">
-          <label class="visually-hidden" for="autoSizingSelect"
-            >Preference</label
-          >
-          <select class="form-select" id="namePrefix">
-            <option selected>Choose...</option>
-            <option value="1">นาย</option>
-            <option value="2">นาง</option>
-            <option value="3">นางสาว</option>
-          </select>
-        </div>
-        <div class="col-auto">
-          <div class="form-check">
-            <input
-              class="form-check-input"
-              type="checkbox"
-              id="autoSizingCheck"
-            />
-            <label class="form-check-label" for="autoSizingCheck">
-              Remember me
-            </label>
-          </div>
-        </div>
-        <div class="col-auto">
-          <button type="button" class="btn btn-primary" id="submitData">
-            Submit
-          </button>
-        </div>
-      </form>
+     <form class="row gy-2 gx-3 align-items-center"> 
+        <div class="form-floating"> <input type="text" class="form-control" id="nameInput" placeholder="ชื่อ"> 
+          <label for="nameInput">Name</label> 
+        </div> 
+          <div class="form-floating"> 
+            <input type="text" class="form-control" id="surnameInput" placeholder="นามสกุล"> 
+            <label for="surnameInput">Surname</label> 
+          </div> 
+          <div class="form-floating"> 
+            <input type="text" class="form-control" id="studentIdInput" placeholder="รหัสนักศึกษา"> 
+            <label for="studentIdInput">รหัสนักศึกษา</label> 
+          </div> 
+          <div class="form-floating"> 
+            <input type="text" class="form-control" id="gpaInput" placeholder="gpa"> 
+            <label for="gpaInput">GPA</label> 
+          </div> 
+          <div class="form-floating"> 
+            <input type="text" class="form-control" id="imageLinkInput" placeholder="image Link"> 
+            <label for="imagelinkInput">Image link </label>
+            <div class="col-auto"> 
+            <button type="button" class="btn btn-primary" id="addButton">Add</button> 
+            <button type="button" class="btn btn-success" id="updateButton">Edit</button> 
+
+            </div> 
+          </div> 
+      </form> 
     </div>
-    <div id="output" class="px-5">
+    </div>
+    <div  class="px-5" id="output">
       <table class="table table-hover">
         <thead>
           <tr>
             <th scope="col">#</th>
             <th scope="col">ชื่อ</th>
             <th scope="col">รหัส</th>
-            <th scope="col">เพศ</th>
+            <th scope="col">ลบ</th>
+            <th scope="col">แก้ไข</th>
           </tr>
         </thead>
         <tbody id="tableBody"></tbody>
         <tbody id="outputTableBody"></tbody>
       </table>
+    </div>
+    <div  class="px-3 m-5" id="single_student_result">
+      <div class="row">
+        <div class="col-3"><b>Id:</b></div>
+        <div class="col-3" id="id">id</div>
+      </div>
+      <div class="row">
+        <div class="col-3"><b>Student id:</b></div>
+        <div class="col-3" id="studentId">Student id</div>
+      </div>
+      <div class="row">
+        <div class="col-3"><b>Name:</b></div>
+        <div class="col-3" id="name">name and surname</div>
+      </div>
+      <div class="row">
+        <div class="col-3"><b>GPA:</b></div>
+        <div class="col-3" id="gpa">gpa</div>
+      </div>
+      <div class="row">
+        <div class="col-3"><b>Id:</b></div>
+        <div class="col">
+          <img src="asset/images/default.jpg" alt="default image" id="image" />
+        </div>
+      </div>
     </div>
     <!-- Optional JavaScript; choose one of the two! -->
 
